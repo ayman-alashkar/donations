@@ -30,9 +30,22 @@
 <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700;900&family=Reem+Kufi:wght@400;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-html,body{
-  max-width:100vw;
+html{
+  width:100%;
+  max-width:100%;
   overflow-x:hidden;
+  -webkit-text-size-adjust:100%;
+  text-size-adjust:100%;
+}
+body{
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden;
+  margin:0; padding:0;
+  background:#0a0a0a;
+  display:flex; flex-direction:column; align-items:center;
+  font-family:'Cairo',sans-serif;
+  min-height:100vh;
 }
 :root{
   --g1:#0a2418; --g2:#143a24; --g3:#1d5034;
@@ -41,22 +54,13 @@ html,body{
   --red:#7a1424; --red2:#3d0a14;
   --white:#fff; --ink:#1a0f00;
 }
-body{
-  margin:0; padding:0;
-  background:#0a0a0a;
-  display:flex; flex-direction:column; align-items:center;
-  font-family:'Cairo',sans-serif;
-  min-height:100vh;
-  width:100%;
-}
 
 /* ══ DOWNLOAD BUTTONS ══ */
 .dl-wrap{
   position:sticky; top:0; z-index:100;
   width:100%; max-width:560px;
   padding:6px;
-  background:rgba(10,10,10,0.95);
-  backdrop-filter:blur(8px);
+  background:#0a0a0a;
   display:flex; gap:6px;
   border-bottom:1px solid rgba(200,146,30,0.3);
 }
@@ -432,6 +436,25 @@ body{
   .mosque-art svg{ width:60px; height:75px; }
 }
 </style>
+<script>
+// Chrome Android viewport fix: ensures the page renders at actual device width.
+// Some Chrome Android versions ignore the viewport meta tag if cached oddly,
+// so we re-apply it via JS as a belt-and-suspenders measure.
+(function(){
+  function fixViewport(){
+    var meta = document.querySelector('meta[name=viewport]');
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.name = 'viewport';
+      document.head.appendChild(meta);
+    }
+    meta.setAttribute('content', 'width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover');
+  }
+  fixViewport();
+  // also re-apply on orientation change
+  window.addEventListener('orientationchange', fixViewport);
+})();
+</script>
 </head>
 <body>
 
