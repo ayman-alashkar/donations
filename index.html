@@ -2,8 +2,31 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>مسجد إيشيكاوا</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+<meta name="theme-color" content="#0a2418">
+<title>مسجد إيشيكاوا — حملة بناء المسجد الثاني في أوكيناوا</title>
+<meta name="description" content="حملة بناء المسجد الثاني في جزيرة أوكيناوا - اليابان. ساهم في إكمال مسجد إيشيكاوا ليظل منارة للإسلام في الجزيرة.">
+
+<!-- ═══ Open Graph / Facebook / WhatsApp link preview ═══ -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="مسجد إيشيكاوا — حملة بناء المسجد الثاني">
+<meta property="og:description" content="ساهم في إكمال المسجد الثاني في جزيرة أوكيناوا - اليابان. صدقة جارية لك ولوالديك.">
+<meta property="og:image" content="https://ayman-alashkar.github.io/donations/01.png">
+<meta property="og:image:secure_url" content="https://ayman-alashkar.github.io/donations/01.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="960">
+<meta property="og:image:alt" content="مسجد إيشيكاوا - أوكيناوا">
+<meta property="og:url" content="https://ayman-alashkar.github.io/donations/">
+<meta property="og:site_name" content="مسجد إيشيكاوا">
+<meta property="og:locale" content="ar_AR">
+
+<!-- ═══ Twitter Card ═══ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="مسجد إيشيكاوا — حملة بناء المسجد الثاني">
+<meta name="twitter:description" content="ساهم في إكمال المسجد الثاني في جزيرة أوكيناوا - اليابان">
+<meta name="twitter:image" content="https://ayman-alashkar.github.io/donations/01.png">
+
 <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700;900&family=Reem+Kufi:wght@400;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -49,9 +72,10 @@ body{
 .dl-btn.loading{opacity:0.7; pointer-events:none;}
 .dl-btn.share{background:linear-gradient(135deg,#1d5034,#0a2418); color:var(--gold3); border-color:var(--gold);}
 
-/* ══ FLYER — natural height ══ */
+/* ══ FLYER — natural height, fluid on mobile ══ */
 .flyer{
-  width:560px;
+  width:100%;
+  max-width:560px;
   background:var(--cream);
   position:relative;
   overflow:hidden;
@@ -387,7 +411,6 @@ body{
 
 /* ══ RESPONSIVE ══ */
 @media (max-width:580px){
-  .flyer{ width:100%; max-width:560px; }
   .dl-wrap{ max-width:none; }
 }
 </style>
